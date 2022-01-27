@@ -1,0 +1,16 @@
+<div style="margin-top: 30px;">
+    <form action="." method="post">
+        {% csrf_token %}
+        <div style="margin-top: 10px;">
+            <input type="text" name="title" id="create_title" placeholder="Title...">
+        </div>
+
+        <div style="margin-top: 10px;">
+            <textarea name="content" id="create_content" placeholder="Content..."></textarea>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <button type="submit" id="create">Create</button>
+        </div>
+    </form>
+</div>

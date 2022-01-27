@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+        <a href="/">Home</a>
+        <a href="/login/">Login</a>
+        <a href="/register/">Register</a>
+        <a href="/articles/create/">Create</a>
+        <div style="margin-top: 30px;">
+            <form action="/articles/">
+                <input type="text" name="q" id="home_q">
+                <button type="submit" id="home_q_submit">Search</button>
+            </form>
+        </div>
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>

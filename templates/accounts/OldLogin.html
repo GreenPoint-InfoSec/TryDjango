@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if not request.user.is_authenticated %}
+    <div style="margin-top: 30px;">
+        <form action="." method="post">
+            {% csrf_token %}
+            {% if error %}
+            <p style="color: red;">{{error}}</p>
+            {% endif %}
+            <div style="margin-top: 10px;">
+                <input type="text" name="username" id="username_login" placeholder="username">
+            </div>
+
+            <div style="margin-top: 10px;">
+                <input type="password" name="password" id="password_login" placeholder="password">
+            </div>
+
+            <div style="margin-top: 10px;">
+                <button type="submit" id="login">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div><p>Need an account? Please <a href="/register/">Register</a>.</p></div>
+{% else %}
+    <h3>You are already logged in. Would you like to <a href="/logout/">logout</a>?</h3>
+{% endif %}
+
+{% endblock content %}
