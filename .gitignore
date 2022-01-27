@@ -18,6 +18,7 @@ lib/
 lib64/
 
 
+.env
 
 pyvenv.cfg
 TryDjango.code-workspace
